@@ -5,6 +5,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
+    margin-top: ${props => props?.marginTop}
 `;
 
 export const Headline = styled.h1`
@@ -24,3 +25,22 @@ export const ItemList = styled.ul`
 export const Item = styled.li`
 
 `;
+
+export const Block = styled.div`
+    display: flex;
+    flex-direction: column;
+    border:5px solid red;
+`
+
+export const TextBlock= styled.div`
+    display: flex;
+    flex-direction: row;
+`
+
+export const Label = styled.div`
+    font-weight: bold;
+`
+
+export const Value = styled.div`
+
+`

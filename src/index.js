@@ -9,6 +9,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import PropsSpreadOperator from './tutorials/PropsSpreadOperator'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,9 @@ ReactDOM.render(
     <Switch>
           <Route path="/tutorial" exact>
               <TutorialPage />
+          </Route>
+          <Route path="/props-spread-operator" exact>
+            <PropsSpreadOperator />
           </Route>
           <Route path="/" >
               <LandingPage />
