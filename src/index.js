@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import {LandingPage} from './components/LandingPage';
 import TutorialPage from './components/TutorialPage';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
