@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-tutorials/static/css/main.2ae47eeb.chunk.css",
-    "main.js": "/react-tutorials/static/js/main.c26478d0.chunk.js",
-    "main.js.map": "/react-tutorials/static/js/main.c26478d0.chunk.js.map",
+    "main.js": "/react-tutorials/static/js/main.ec68a2b9.chunk.js",
+    "main.js.map": "/react-tutorials/static/js/main.ec68a2b9.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.js": "/react-tutorials/static/js/react-syntax-highlighter_languages_refractor_abap.3ed4e290.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js.map": "/react-tutorials/static/js/react-syntax-highlighter_languages_refractor_abap.3ed4e290.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/react-tutorials/static/js/react-syntax-highlighter_languages_refractor_actionscript.13a0b664.chunk.js",
@@ -321,6 +321,6 @@
     "static/js/runtime-main.b96be30d.js",
     "static/js/153.f41b63a3.chunk.js",
     "static/css/main.2ae47eeb.chunk.css",
-    "static/js/main.c26478d0.chunk.js"
+    "static/js/main.ec68a2b9.chunk.js"
   ]
 }
