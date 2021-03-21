@@ -21,6 +21,8 @@ export const Card = styled.div`
     width: ${props => props.width ? props.width : '100%'};
     margin: auto;
     background-color: white;
+    margin-top: ${props => props.marginTop ? props.marginTop : '5rem'};
+    margin-bottom: ${props => props.marginBottom ? props.marginBottom : '5rem'};
 `;
 
 
@@ -49,6 +51,7 @@ export const ItemList = styled.ul`
     overflow: auto;
     background-color: #FFDF6C;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
 `;
 
 export const Block = styled.div`
@@ -91,4 +94,46 @@ export const TabContentContainer = styled.div`
     border: 0.5px solid gray;
     width: 50vw;
     margin-top: 5rem;
+`
+
+export const NavContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+`;
+
+export const NavItem = styled.div`
+    width: 20%;
+`;
+
+export const WidthComponent = styled.div`
+    width : ${props => props.width ? props.width : '100%'};
+`;
+
+export const AccordianContainer= styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+`;
+
+export const AccordianLabel = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 3rem;
+    width: 100%;
+    cursor: pointer;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+    margin-bottom: 0.5rem;
+`;
+
+export const AccordianText = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+
+export const AccordianContent = styled.div`
+    width: 100%;
 `

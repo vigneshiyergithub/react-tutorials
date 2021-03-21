@@ -7,7 +7,7 @@ export const LandingPage = (props) => {
         textDecoration : 'none',
         color: 'black'
     }
-    return <Card width={'50vw'}>
+    return <Card width={'80vw'}>
         <Container >
             <Headline>
                 React Tutorials
@@ -15,7 +15,7 @@ export const LandingPage = (props) => {
             <ContentBody>
                 <ItemList>
                     <Item>
-                        <Link to={`/tutorial?id=${"props"}`} style={linkStyle}>Passing props using spread operator</Link>
+                        <Link to={`/tutorial?id=${"props-spread-operator"}`} style={linkStyle}>Passing props using spread operator</Link>
                     </Item>
                 </ItemList>
             </ContentBody>
