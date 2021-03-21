@@ -38,19 +38,19 @@ export const ContentBody = styled.div`
 `
 
 export const Item = styled.li`
-    width: 100%;
+    background-color: #FFDF6C;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border: 1px solid gray;
+    padding: 0.4rem;
+    margin-bottom: 2rem;
 `;
 
 export const ItemList = styled.ul`
     list-style-type: none;
-    border: 1px solid gray;
-    padding: 0.4rem;
     width: 100%;
     margin-left: 3%;
     margin-right: 3%;
     overflow: auto;
-    background-color: #FFDF6C;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     cursor: pointer;
 `;
 

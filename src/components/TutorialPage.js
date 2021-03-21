@@ -50,6 +50,7 @@ const TutorialPage = (props) => {
     }, [id, codeMap]);
     const fileLocationList = tutorialDetails?.fileLocationList;
     const title = tutorialDetails?.title;
+    const link = tutorialDetails?.link;
     return <Card width={'80vw'}>
         <Container>
             <Navbar />
@@ -57,6 +58,9 @@ const TutorialPage = (props) => {
             <ContentBody>
                 <VideoPlayer src={tutorialDetails?.videoLink} />
             </ContentBody>
+            {
+                link && <Headline><Link to={`/${link}`} >Link to example</Link></Headline>
+            }
             <Headline>Related Files</Headline>
             <WidthComponent width={'80%'}>
                 {
