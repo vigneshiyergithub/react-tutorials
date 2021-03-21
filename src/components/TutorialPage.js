@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player';
 import { useLocation } from 'react-router-dom';
-import { Container, ContentBody, Headline, Card, 
+import {
+    Container, ContentBody, Headline, Card,
     EmptyBlock, NavContainer, NavItem, WidthComponent, AccordianContent,
     AccordianContainer, AccordianLabel, AccordianText
 } from '../styledComponents/Unit1';
@@ -29,34 +30,59 @@ const DownIcon = styled(DownSvg)`
 
 const TutorialPage = (props) => {
     const [tutorialDetails, setTutorialDetails] = useState({})
-    const [codeText, setCodeText] = useState('');
+    const [codeMap, setCodeMap] = useState({});
     const query = useQuery();
     const id = query.get('id');
     useEffect(() => {
         const tutorialDetails = TutorialMapping[id];
-        const { fileLocation } = tutorialDetails;
-        setTutorialDetails(tutorialDetails)
-        fetch(fileLocation).then(resp => resp.text()).then(data => {
-            setCodeText(data)
+        const { fileLocationList } = tutorialDetails;
+        setTutorialDetails(tutorialDetails);
+        fileLocationList.forEach(fileLocation => {
+            fetch(fileLocation).then(resp => resp.text()).then(data => {
+                if(!codeMap[fileLocation]) {
+                    setCodeMap({
+                        ...codeMap,
+                        [`${fileLocation}`]: data
+                    })
+                }
+            })
         })
-    }, [id]);
+    }, [id, codeMap]);
+    const fileLocationList = tutorialDetails?.fileLocationList;
+    const title = tutorialDetails?.title;
     return <Card width={'80vw'}>
         <Container>
             <Navbar />
-            <Headline>Tutorial title</Headline>
+            <Headline>{title}</Headline>
             <ContentBody>
                 <VideoPlayer src={tutorialDetails?.videoLink} />
             </ContentBody>
             <Headline>Related Files</Headline>
             <WidthComponent width={'80%'}>
-                <Accordian displayText={tutorialDetails?.fileLocation}>
-                    <CopyBlock
-                        text={codeText}
-                        language={'js'}
-                        showLineNumbers={true}
-                        theme={dracula}
-                    />
-                </Accordian>
+                {
+                    Object.keys(codeMap).length === fileLocationList?.length && fileLocationList?.map((fileLocation, index) => {
+                        const codeText = codeMap[fileLocation];
+                        
+                        return <Accordian displayText={fileLocation} key={index}
+                            onRender = {
+                                () => {
+                                    if(codeText) {
+                                        return <CopyBlock
+                                            text={codeText}
+                                            language={'js'}
+                                            showLineNumbers={true}
+                                            theme={dracula}
+                                            codeBlock
+                                        />
+                                    }
+                                    return null;
+                                }
+                            }
+                        >
+                            
+                        </Accordian>
+                    })
+                }
             </WidthComponent>
             <EmptyBlock />
         </Container>
@@ -71,14 +97,14 @@ const Accordian = (props) => {
     }
     return <AccordianContainer>
         <AccordianLabel onClick={accordianClick}>
-                <AccordianText>{props.displayText}</AccordianText>
-                {
-                    expand ? <UpIcon /> : <DownIcon />
-                }
-            </AccordianLabel>
+            <AccordianText>{props.displayText}</AccordianText>
+            {
+                expand ? <UpIcon /> : <DownIcon />
+            }
+        </AccordianLabel>
         <AccordianContent>
             {
-                expand && props.children
+                expand && props.onRender()
             }
         </AccordianContent>
     </AccordianContainer>
