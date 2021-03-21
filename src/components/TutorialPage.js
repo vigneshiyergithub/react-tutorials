@@ -54,7 +54,7 @@ const TutorialPage = (props) => {
     return <Card width={'80vw'}>
         <Container>
             <Navbar />
-            <Headline>{title}</Headline>
+            <Headline underline>{title}</Headline>
             <ContentBody>
                 <VideoPlayer src={tutorialDetails?.videoLink} />
             </ContentBody>

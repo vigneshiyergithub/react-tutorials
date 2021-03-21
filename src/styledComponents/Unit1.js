@@ -28,6 +28,7 @@ export const Card = styled.div`
 
 export const Headline = styled.h1`
     font-size: 20;
+    text-decoration: ${props => props.underline ? 'underline' : 'none'}
 `;
 
 export const ContentBody = styled.div`
@@ -136,4 +137,8 @@ export const AccordianText = styled.div`
 
 export const AccordianContent = styled.div`
     width: 100%;
+`;
+
+export const GitBlock = styled.a`
+
 `

@@ -7,7 +7,7 @@ export const TutorialMapping = {
     [`${Tutorials.PropsSpreadOperator}`] : {
         link : Tutorials.PropsSpreadOperator,
         title: 'How to pass props to child component using spread operator',
-        videoLink : 'https://www.youtube.com/watch?v=MbWS706Xaxk',
+        videoLink : '',
         fileLocationList : [
             'data/props-spread-operator/PersonDataDisplay.js',
             'data/props-spread-operator/PropsSpreadOperator.js',
@@ -18,7 +18,7 @@ export const TutorialMapping = {
     },
     [`${Tutorials.ClickChildRef}`] : {
         title: 'How to trigger child click event using refs',
-        videoLink : 'https://www.youtube.com/watch?v=MbWS706Xaxk',
+        videoLink : '',
         fileLocationList : [
             'data/props-spread-operator/PersonDataDisplay.js',
             'data/props-spread-operator/PropsSpreadOperator.js',

@@ -1,7 +1,13 @@
 import React, { useRef } from 'react';
-import { Container, Headline, ContentBody, ItemList, Item, Card, EmptyBlock } from '../styledComponents/Unit1';
+import { Container, Headline, ContentBody, ItemList, Item, Card, EmptyBlock, GitBlock } from '../styledComponents/Unit1';
 import { Link } from 'react-router-dom';
 import { Tutorials, TutorialMapping } from '../constants/Tutorial-Mapping';
+import { ReactComponent as GitHubSvg } from '../assets/github.svg';
+import styled from 'styled-components';
+
+const GitHubIcon = styled(GitHubSvg)`
+    transform: scale(1);
+`
 
 export const LandingPage = (props) => {
     const linkStyle = {
@@ -34,6 +40,12 @@ export const LandingPage = (props) => {
                 </ItemList>
             </ContentBody>
             <EmptyBlock />
+            <GitLink />
+            <EmptyBlock />
         </Container>
     </Card>
+}
+
+const GitLink = (props) => {
+    return <GitBlock href={"https://github.com/vigneshiyergithub/react-tutorials"} target="_blank"><GitHubIcon /></GitBlock>
 }
