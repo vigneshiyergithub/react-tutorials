@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-tutorials/static/css/main.32c3efe9.chunk.css",
-    "main.js": "/react-tutorials/static/js/main.5d0a8677.chunk.js",
-    "main.js.map": "/react-tutorials/static/js/main.5d0a8677.chunk.js.map",
+    "main.js": "/react-tutorials/static/js/main.fc50ebf8.chunk.js",
+    "main.js.map": "/react-tutorials/static/js/main.fc50ebf8.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.js": "/react-tutorials/static/js/react-syntax-highlighter_languages_refractor_abap.92aba8dd.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js.map": "/react-tutorials/static/js/react-syntax-highlighter_languages_refractor_abap.92aba8dd.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/react-tutorials/static/js/react-syntax-highlighter_languages_refractor_actionscript.a975ec11.chunk.js",
@@ -318,12 +318,13 @@
     "static/js/153.f6a48234.chunk.js.LICENSE.txt": "/react-tutorials/static/js/153.f6a48234.chunk.js.LICENSE.txt",
     "static/media/back-icon.e9b6f2dd.svg": "/react-tutorials/static/media/back-icon.e9b6f2dd.svg",
     "static/media/down.4fa23ca5.svg": "/react-tutorials/static/media/down.4fa23ca5.svg",
+    "static/media/github.4914d57c.svg": "/react-tutorials/static/media/github.4914d57c.svg",
     "static/media/up.cf546d16.svg": "/react-tutorials/static/media/up.cf546d16.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.1bf36527.js",
     "static/js/153.f6a48234.chunk.js",
     "static/css/main.32c3efe9.chunk.css",
-    "static/js/main.5d0a8677.chunk.js"
+    "static/js/main.fc50ebf8.chunk.js"
   ]
 }
