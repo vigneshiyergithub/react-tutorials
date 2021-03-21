@@ -27,8 +27,8 @@ export const Card = styled.div`
 
 
 export const Headline = styled.h1`
-    font-size: 20;
-    text-decoration: ${props => props.underline ? 'underline' : 'none'}
+    text-decoration: ${props => props.underline ? 'underline' : 'none'};
+    text-align: center;
 `;
 
 export const ContentBody = styled.div`
@@ -53,6 +53,7 @@ export const ItemList = styled.ul`
     margin-right: 3%;
     overflow: auto;
     cursor: pointer;
+    padding: 0;
 `;
 
 export const Block = styled.div`
@@ -121,12 +122,13 @@ export const AccordianLabel = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 3rem;
     width: 100%;
     cursor: pointer;
     border-bottom: 1px solid grey;
     border-top: 1px solid grey;
     margin-bottom: 0.5rem;
+    word-break: break-all;
+    padding: 0.2rem;
 `;
 
 export const AccordianText = styled.div`
