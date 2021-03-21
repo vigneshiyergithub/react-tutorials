@@ -38,7 +38,7 @@ export const ContentBody = styled.div`
 `
 
 export const Item = styled.li`
-
+    width: 100%;
 `;
 
 export const ItemList = styled.ul`
