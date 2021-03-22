@@ -83,15 +83,20 @@ export const TabContainer = styled.div`
     width: 50vw;
     margin: 5rem;
     justify-content: space-between;
+    flex-wrap: wrap;
 `
 // Center 
 export const TabLabel = styled.div`
     text-align: center;
     border: 2px solid black;
-    width: 6vw;
+    width: fit-content;
     cursor: pointer;
-    background-color: ${props => props.selected ? 'gray' : 'none'}
-`
+    background-color: ${props => props.selected ? 'gray' : 'none'};
+    @media (min-width: 768px) {
+        width: 6vw;
+    }
+`;
+
 export const TabContentContainer = styled.div`
     border: 0.5px solid gray;
     width: 50vw;
