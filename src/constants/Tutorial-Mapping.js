@@ -20,11 +20,7 @@ export const TutorialMapping = {
         title: 'How to trigger child click event using refs',
         videoLink : '',
         fileLocationList : [
-            'data/props-spread-operator/PersonDataDisplay.js',
-            'data/props-spread-operator/PropsSpreadOperator.js',
-            'data/props-spread-operator/PropsSpreadOperatorExampleComponents.js',
-            'data/props-spread-operator/tabConfig.js',
-            'data/props-spread-operator/Tabs.js'
+            'data/click-child-ref/LandingPage.js'
         ]
     }
 };

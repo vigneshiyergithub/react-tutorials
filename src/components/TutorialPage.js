@@ -3,21 +3,18 @@ import ReactPlayer from 'react-player';
 import { useLocation } from 'react-router-dom';
 import {
     Container, ContentBody, Headline, Card,
-    EmptyBlock, NavContainer, NavItem, WidthComponent, AccordianContent,
+    EmptyBlock, WidthComponent, AccordianContent,
     AccordianContainer, AccordianLabel, AccordianText
 } from '../styledComponents/Unit1';
 import { CopyBlock, dracula } from "react-code-blocks";
-import { Link } from 'react-router-dom';
-import { ReactComponent as BackSvg } from '../assets/back-icon.svg';
 import { ReactComponent as DownSvg } from '../assets/down.svg';
 import { ReactComponent as UpSvg } from '../assets/up.svg';
 import styled from 'styled-components';
-import { TutorialMapping } from '../constants/Tutorial-Mapping'
+import { TutorialMapping } from '../constants/Tutorial-Mapping';
+import {GitLink} from '../styledComponents/Unit2';
+import {Navbar} from '../styledComponents/Unit2';
+import { Link } from 'react-router-dom';
 
-const BackIcon = styled(BackSvg)`
-    transform: scale(0.5);
-    height: 3rem;
-`;
 const UpIcon = styled(UpSvg)`
     transform: scale(0.5);
     height: 3rem;
@@ -89,6 +86,8 @@ const TutorialPage = (props) => {
                 }
             </WidthComponent>
             <EmptyBlock />
+            <GitLink />
+            <EmptyBlock />
         </Container>
     </Card>
 }
@@ -119,19 +118,6 @@ const VideoPlayer = (props) => {
         return <ReactPlayer url={props.src} />
     }
     return null;
-}
-
-const Navbar = (props) => {
-    //TODO: move this link style to a common place
-    const linkStyle = {
-        textDecoration: 'none',
-        color: 'black'
-    }
-    return <NavContainer>
-        <NavItem>
-            <Link to={`/`} style={linkStyle}><BackIcon /></Link>
-        </NavItem>
-    </NavContainer>
 }
 
 function useQuery() {

@@ -81,7 +81,7 @@ export const TabContainer = styled.div`
     display : flex;
     flex-direction: row;
     width: 50vw;
-    margin-top: 10rem;
+    margin: 5rem;
     justify-content: space-between;
 `
 // Center 
@@ -96,6 +96,7 @@ export const TabContentContainer = styled.div`
     border: 0.5px solid gray;
     width: 50vw;
     margin-top: 5rem;
+    margin-bottom: 5rem;
 `
 
 export const NavContainer = styled.div`
@@ -140,7 +141,3 @@ export const AccordianText = styled.div`
 export const AccordianContent = styled.div`
     width: 100%;
 `;
-
-export const GitBlock = styled.a`
-
-`

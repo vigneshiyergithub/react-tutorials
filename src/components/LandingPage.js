@@ -1,27 +1,16 @@
-import React, { useRef } from 'react';
-import { Container, Headline, ContentBody, ItemList, Item, Card, EmptyBlock, GitBlock } from '../styledComponents/Unit1';
+import React, {  useRef } from 'react';
+import { Container, Headline, ContentBody, ItemList, Item, Card, EmptyBlock } from '../styledComponents/Unit1';
 import { Link } from 'react-router-dom';
 import { Tutorials, TutorialMapping } from '../constants/Tutorial-Mapping';
-import { ReactComponent as GitHubSvg } from '../assets/github.svg';
-import styled from 'styled-components';
-
-const GitHubIcon = styled(GitHubSvg)`
-    transform: scale(1);
-`
+import {GitLink} from '../styledComponents/Unit2';
 
 export const LandingPage = (props) => {
+    const tutorials = Object.values(Tutorials)
     const linkStyle = {
         textDecoration: 'none',
         color: 'black',
         marginBottom: '0.3rem'
     };
-    const linkRef = useRef();
-    const itemClick = (e) => {
-        if (linkRef.current) {
-            linkRef.current.click();
-        }
-    };
-    const tutorials = Object.values(Tutorials)
     return <Card width={'80vw'}>
         <Container >
             <Headline>
@@ -32,9 +21,12 @@ export const LandingPage = (props) => {
                     {
                         tutorials.map((tutorialLink, index) => {
                             const title = TutorialMapping?.[tutorialLink]?.title;
-                            return <Item onClick={itemClick} key={index}>
-                                <Link ref={linkRef} to={`/tutorial?id=${tutorialLink}`} style={linkStyle}>{title}</Link>
-                            </Item>
+                            return <TutorialItem 
+                                key={index}
+                                title={title}
+                                tutorialLink={tutorialLink}
+                                linkStyle={linkStyle}
+                            />
                         })
                     }
                 </ItemList>
@@ -46,6 +38,14 @@ export const LandingPage = (props) => {
     </Card>
 }
 
-const GitLink = (props) => {
-    return <GitBlock href={"https://github.com/vigneshiyergithub/react-tutorials"} target="_blank"><GitHubIcon /></GitBlock>
+const TutorialItem = (props) => {
+    const linkRef = useRef();
+    const itemClick = (e) => {
+        if (linkRef.current) {
+            linkRef.current.click();
+        }
+    };
+    return <Item onClick={itemClick}>
+    <Link ref={linkRef} to={`/tutorial?id=${props.tutorialLink}`} style={props.linkStyle}>{props.title}</Link>
+</Item>
 }
