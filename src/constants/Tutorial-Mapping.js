@@ -20,7 +20,9 @@ export const TutorialMapping = {
         title: 'How to trigger child click event using refs',
         videoLink: '',
         gist: 'vigneshiyergithub/6c41293706893bb057af7977292adbc5',
-        resources: []
+        resources: [
+            'https://reactjs.org/docs/refs-and-the-dom.html'
+        ]
     }
 };
 
