@@ -24,7 +24,7 @@ const DownIcon = styled(DownSvg)`
     transform: scale(0.5);
     height: 3rem;
 `
-
+//TODO: Add Resources block to display all the relevant references
 const TutorialPage = (props) => {
     const [tutorialDetails, setTutorialDetails] = useState({})
     const [codeMap, setCodeMap] = useState({});
