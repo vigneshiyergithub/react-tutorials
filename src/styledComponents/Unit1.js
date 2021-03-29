@@ -36,7 +36,15 @@ export const ContentBody = styled.div`
     flex-direction: row;
     justify-content: center;
     width: 100%;
-`
+`;
+
+export const FormContentBody = styled.div`
+    display: flex; 
+    justify-content: space-around; 
+    gap: 5px;
+    width: 100%;
+    margin: 0.5rem;
+`;
 
 export const Item = styled.li`
     background-color: #FFDF6C;
@@ -146,3 +154,23 @@ export const AccordianText = styled.div`
 export const AccordianContent = styled.div`
     width: 100%;
 `;
+
+export const FormElementContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: ${props => props.width ? props.width : '50%'};
+    padding: 0.5rem;
+    border: 1px solid gray;
+`;
+
+export const FormElementLabel = styled(Label)`
+    width: 20%;
+`;
+
+export const FormElementComponent = styled.div`
+    width: 80%;
+`;
+
+export const FormInput = styled.input`
+    width: 80%;
+`

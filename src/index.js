@@ -9,7 +9,8 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import PropsSpreadOperator from './tutorials/PropsSpreadOperator'
+import PropsSpreadOperator from './tutorials/PropsSpreadOperator';
+import MultiSelectForm from './tutorials/MultiSelectForm';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,6 +21,12 @@ ReactDOM.render(
           </Route>
           <Route path="/props-spread-operator" exact>
             <PropsSpreadOperator />
+          </Route>
+          <Route path='/multi-section-form' exact>
+            <MultiSelectForm />
+          </Route>
+          <Route path='/accordian' exact>
+            <MultiSelectForm />
           </Route>
           <Route path="/" >
               <LandingPage />

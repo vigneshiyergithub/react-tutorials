@@ -1,7 +1,9 @@
 export const Tutorials = {
     PropsSpreadOperator: 'props-spread-operator',
     ClickChildRef: 'click-child-ref',
-    TabsImplementation: 'tabs-implentation'
+    TabsImplementation: 'tabs-implentation',
+    MultiSectionForm: 'multi-section-form',
+    Accordian: 'accordian'
 }
 
 export const TutorialMapping = {
@@ -34,6 +36,24 @@ export const TutorialMapping = {
             'https://reactjs.org/docs/conditional-rendering.html',
             'https://reactjs.org/docs/lists-and-keys.html',
             
+        ]
+    },
+    [`${Tutorials.MultiSectionForm}`]: {
+        title: 'Implementing Multi section Forms',
+        gist: 'vigneshiyergithub/4f9d1cbe181d69a7f5c531cf31db01b4',
+        link: Tutorials.MultiSectionForm,
+        resources: [
+            'https://reactjs.org/docs/jsx-in-depth.html#spread-attributes',
+            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax'
+        ]
+    },
+    [`${Tutorials.Accordian}`]: {
+        title: 'How to implement Accordian',
+        gist: 'vigneshiyergithub/123e6a6572ae2138488de4d308962bc0',
+        link: Tutorials.Accordian,
+        resources: [
+            'https://reactjs.org/docs/hooks-intro.html',
+            'https://reactjs.org/docs/conditional-rendering.html',
         ]
     }
 };
