@@ -1,6 +1,7 @@
 export const Tutorials = {
     PropsSpreadOperator: 'props-spread-operator',
-    ClickChildRef: 'click-child-ref'
+    ClickChildRef: 'click-child-ref',
+    TabsImplementation: 'tabs-implentation'
 }
 
 export const TutorialMapping = {
@@ -22,6 +23,17 @@ export const TutorialMapping = {
         gist: 'vigneshiyergithub/6c41293706893bb057af7977292adbc5',
         resources: [
             'https://reactjs.org/docs/refs-and-the-dom.html'
+        ]
+    },
+    [`${Tutorials.TabsImplementation}`]: {
+        title: 'How to implement Tabs',
+        videoLink: '',
+        gist: 'vigneshiyergithub/3c04f70e7d60708f53b4dd3af03d9740',
+        resources: [
+            'https://reactjs.org/docs/hooks-intro.html',
+            'https://reactjs.org/docs/conditional-rendering.html',
+            'https://reactjs.org/docs/lists-and-keys.html',
+            
         ]
     }
 };

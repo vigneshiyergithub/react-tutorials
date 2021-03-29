@@ -3,15 +3,15 @@ import {Example1, Example2, Example3} from './PropsSpreadOperatorExampleComponen
 export const TAB_CONFIG = [
     {
         tabName : 'Example 1',
-        component : () => <Example1 />
+        component : (props) => <Example1 {...props} />
     },
     {
         tabName : 'Example 2',
-        component : () => <Example2 />
+        component : (props) => <Example2 {...props} />
     },
     {
         tabName : 'Example 3',
-        component : () => <Example3 />
+        component : (props) => <Example3 {...props} />
     },
     // {
     //     tabName : 'New Component',

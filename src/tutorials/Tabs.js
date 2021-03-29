@@ -64,7 +64,7 @@ const TabDetails = (props) => {
     const componentToRender = props?.tabDetails?.component
     return <TabContentContainer>
         {
-            componentToRender()
+            componentToRender(props)
         }
     </TabContentContainer>
 }
