@@ -12,6 +12,7 @@ export const TutorialMapping = {
         title: 'How to pass props to child component using spread operator',
         videoLink: '',
         gist: 'vigneshiyergithub/fe8e30a543dfc7db5a0132ed909f3e4c',
+        sandbox: "https://codesandbox.io/s/react-insights-props-spread-operator-1d38b?fontsize=14&hidenavigation=1&theme=dark",
         resources: [
             'https://reactjs.org/docs/jsx-in-depth.html#spread-attributes',
             'https://kentcdodds.com/blog/prop-drilling',
